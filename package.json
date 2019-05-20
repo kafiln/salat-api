@@ -1,0 +1,25 @@
+{
+  "name": "salat-api",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index",
+    "start": "node index"
+  },
+  "keywords": [],
+  "author": {
+    "email": "kafil.nasdami@gmail.com",
+    "name": "Kafil Nasdami",
+    "url":"https://www.github.com/kafiil"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+  }
+}
