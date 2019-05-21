@@ -12,7 +12,6 @@ router.get('/:id', (req, res, next) => {
   const parsed = parseInt(id);
   if (!parsed) {
     next();
-    return res.status(400).json({ error: 'Parameter id must be a number' });
   }
   if (parsed > cities.length) {
     return res

@@ -1,9 +1,9 @@
 const router = require('express').Router();
 const city = require('./city');
-// const prayer = require('./prayer');
+const prayer = require('./prayer');
 
 router.use('/city', city);
-// router.use('/prayer', prayer);
+router.use('/prayer', prayer);
 
 //FIXME: Use 404 instead
 router.use('/', (_req, res) => {
