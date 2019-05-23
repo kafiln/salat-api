@@ -3,7 +3,7 @@ const { retriveAllData, resetdb, savePrayersToDb } = require('./utils');
 
 // schedule tasks to be run on the server
 
-cron.schedule('27 1 * * *', async function() {
+cron.schedule('0 0 * * *', async function() {
   console.log('cron started');
   const start = Date.now();
   resetdb();
