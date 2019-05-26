@@ -1,8 +1,11 @@
 const cron = require('node-cron');
+const dotenv = require('dotenv');
+dotenv.config();
+
 const { initDb } = require('./update');
 
 // schedule tasks to be run on the server
-cron.schedule('* * * * *', async function() {
+cron.schedule(process.env.CRON_SCHEDULE, async function() {
   console.log('cron started');
   const start = Date.now();
   await initDb();
