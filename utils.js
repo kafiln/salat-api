@@ -2,8 +2,7 @@ const axios = require('axios');
 const { JSDOM } = require('jsdom');
 const prayers = require('./data/prayers.json');
 const cities = require('./data/cities.json');
-
-const fs = require('fs');
+const { sleep } = require('./sleep');
 
 const API_URL =
   'http://www.habous.gov.ma/horaire%20de%20priere/horaire-pub.php?ville=';
@@ -24,17 +23,19 @@ const parsePrayerTimesFromResponse = response => {
   // Transorm array to object and return it
   return prayers.reduce((acc, { name, time }) => {
     acc[name] = time;
-    acc.date = new Date();
+    acc.date = new Date().toLocaleDateString();
     return acc;
   }, {});
 };
 
+const byName = (a, b) => (a.name > b.name ? 1 : b.name > a.name ? -1 : 0);
+
 const retriveAllData = async () => {
-  cities.sort((a, b) => (a.name > b.name ? 1 : b.name > a.name ? -1 : 0));
+  cities.sort(byName);
   let result = [];
   for (let index = 0; index < cities.length; index++) {
     try {
-      // console.log(cities[index].name);
+      console.log(cities[index].name);
       let prayers = parsePrayerTimesFromResponse(
         await getData(cities[index].id)
       );
@@ -42,15 +43,16 @@ const retriveAllData = async () => {
       prayers.id = cities[index].id;
       result.push(prayers);
     } catch (ex) {
-      //TODO: Use a more descriptif error message
-      console.error('Someting bad happened for city ' + cities[index].name);
+      console.error(`Could not get data for ${cities[index].name}`);
+      console.log(ex);
+      console.error('Retrying after 5 seconds');
+      // wait 5 seconds and retry;
+      sleep(5);
+      index = index - 1;
     }
   }
-  // console.log(result);
   return result;
 };
-
-module.exports.retriveAllData = retriveAllData;
 
 const resetdb = () => {
   const db = initDb();
@@ -59,8 +61,6 @@ const resetdb = () => {
     .remove()
     .write();
 };
-
-module.exports.resetdb = resetdb;
 
 const savePrayersToDb = prayers => {
   const db = initDb();
@@ -72,21 +72,18 @@ const savePrayersToDb = prayers => {
   });
 };
 
-module.exports.savePrayersToDb = savePrayersToDb;
-
 const initDb = () => {
   const low = require('lowdb');
   const FileSync = require('lowdb/adapters/FileSync');
 
-  const adapter = new FileSync('db.json');
+  const adapter = new FileSync('./data/db.json');
   const db = low(adapter);
   return db;
 };
 
-// (async () => {
-//   const start = Date.now();
-//   resetdb();
-//   savePrayersToDb(await retriveAllData());
-//   const time = (Date.now() - start) / 1000;
-//   console.log(`done in ${time} seconds`);
-// })();
+module.exports = {
+  initDb,
+  retriveAllData,
+  savePrayersToDb,
+  resetdb
+};

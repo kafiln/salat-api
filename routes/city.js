@@ -2,9 +2,6 @@ const router = require('express').Router();
 const cities = require('../data/cities.json');
 
 // Gets all the cities
-router.get('/all', (_req, res) => {
-  res.status(200).send(cities);
-});
 
 // Search by Id
 router.get('/:id', (req, res, next) => {
@@ -34,7 +31,11 @@ router.get('/:name', (req, res) => {
       .status(404)
       .json({ error: `City ${name} not found in the available city list` });
   }
-  return res.status(200).json({ cities: result });
+  return res.status(200).json(result);
+});
+
+router.get('/', (_req, res) => {
+  res.status(200).send(cities);
 });
 
 module.exports = router;

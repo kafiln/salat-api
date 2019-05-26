@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 
 //TODO: Add swagger support for api
 // Routes
-app.use('/api', apiRoutes);
+app.use('', apiRoutes);
 
 // register cron
 require('./cron');
