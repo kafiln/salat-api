@@ -3,8 +3,13 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const apiRoutes = require('./routes');
 const app = express();
-const cron = require('node-cron');
+const { initDb } = require('./update');
+const { client } = require('./redis');
 
+client.on('connect', async () => {
+  console.log('connected to redis');
+  await initDb();
+});
 // Use CORS
 app.use(cors());
 

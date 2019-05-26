@@ -3,11 +3,12 @@ const { JSDOM } = require('jsdom');
 const prayers = require('./data/prayers.json');
 const cities = require('./data/cities.json');
 const { sleep } = require('./sleep');
+const dotenv = require('dotenv');
+const { client, getAsync } = require('./redis');
+dotenv.config();
 
-const API_URL =
-  'http://www.habous.gov.ma/horaire%20de%20priere/horaire-pub.php?ville=';
-
-const getData = async cityId => await axios.get(`${API_URL}${cityId}`);
+const getData = async cityId =>
+  await axios.get(`${process.env.API_URL}${cityId}`);
 
 const parsePrayerTimesFromResponse = response => {
   const dom = new JSDOM(`${response.data}`);
@@ -44,46 +45,30 @@ const retriveAllData = async () => {
       result.push(prayers);
     } catch (ex) {
       console.error(`Could not get data for ${cities[index].name}`);
-      console.log(ex);
-      console.error('Retrying after 5 seconds');
+      // console.log(ex);
+      console.error(`Retrying after ${process.env.SLEEP_TIME} seconds`);
       // wait 5 seconds and retry;
-      sleep(5);
+      sleep(process.env.SLEEP_TIME);
       index = index - 1;
     }
   }
   return result;
 };
 
+const setPrayers = prayers => client.set('prayers', JSON.stringify(prayers));
+const getPrayers = async () => JSON.parse(await getAsync('prayers'));
+
 const resetdb = () => {
-  const db = initDb();
-  db.defaults({ prayers: [] }).write();
-  db.get('prayers')
-    .remove()
-    .write();
+  setPrayers([]);
 };
 
 const savePrayersToDb = prayers => {
-  const db = initDb();
-  db.defaults({ prayers: [] }).write();
-  prayers.forEach(prayer => {
-    db.get('prayers')
-      .push(prayer)
-      .write();
-  });
-};
-
-const initDb = () => {
-  const low = require('lowdb');
-  const FileSync = require('lowdb/adapters/FileSync');
-
-  const adapter = new FileSync('./data/db.json');
-  const db = low(adapter);
-  return db;
+  setPrayers(prayers);
 };
 
 module.exports = {
-  initDb,
   retriveAllData,
   savePrayersToDb,
-  resetdb
+  resetdb,
+  getPrayers
 };
