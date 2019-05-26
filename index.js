@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const routes = require('./routes');
 const app = express();
 const { initDb } = require('./update');
@@ -9,6 +10,7 @@ client.on('connect', async () => {
   await initDb();
 });
 
+app.use(cors());
 //TODO: Add swagger doc
 // Routes
 app.use('', routes);
