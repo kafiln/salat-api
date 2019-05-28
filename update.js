@@ -4,7 +4,7 @@ const {
   savePrayersToDb,
   getPrayers
 } = require('./utils');
-const cities = require('./data/cities.json');
+const cities = require('./data/cities');
 
 const isDataUpdated = async () => {
   const prayers = await getPrayers();

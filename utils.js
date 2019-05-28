@@ -10,12 +10,22 @@ dotenv.config();
 const getData = async cityId =>
   await axios.get(`${process.env.API_URL}${cityId}`);
 
+const parseDateFromDom = dom => {
+  const dateString = dom
+    .querySelector('.hor_par h2:nth-child(2)')
+    .textContent.trim()
+    .split(' ')
+    .pop();
+  var pattern = /(\d{2})\/(\d{2})\/(\d{4})/;
+  return new Date(dateString.replace(pattern, '$3/$2/$1'));
+};
 const parsePrayerTimesFromResponse = response => {
   const dom = new JSDOM(`${response.data}`);
   const tds = dom.window.document.getElementsByTagName('td');
-
+  const date = parseDateFromDom(dom.window.document);
   let j = 0;
   for (let i = 0; i < tds.length; i++) {
+    console.log(tds[i].textContent);
     if (i % 2) {
       prayers[j].time = tds[i].textContent.trim();
       j++;
@@ -24,7 +34,7 @@ const parsePrayerTimesFromResponse = response => {
   // Transorm array to object and return it
   return prayers.reduce((acc, { name, time }) => {
     acc[name] = time;
-    acc.date = new Date().toLocaleDateString();
+    acc.date = date;
     return acc;
   }, {});
 };
