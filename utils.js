@@ -1,7 +1,8 @@
 const axios = require('axios');
+const fs = require('fs');
 const { JSDOM } = require('jsdom');
-const prayers = require('./data/prayers.json');
-const cities = require('./data/cities.json');
+const prayers = require('./data/prayers');
+const cities = require('./data/cities');
 const { sleep } = require('./sleep');
 const dotenv = require('dotenv');
 const { client, getAsync } = require('./redis');
@@ -39,6 +40,33 @@ const parsePrayerTimesFromResponse = response => {
   }, {});
 };
 
+const chunk = (arr, size) =>
+  Array.from({ length: Math.ceil(arr.length / size) }, (v, i) =>
+    arr.slice(i * size, i * size + size)
+  );
+
+const parsePrayersFromResponse = (response, month) => {
+  const names = require('./data/prayers');
+  const dom = new JSDOM(`${response.data}`);
+  const tds = Array.from(dom.window.document.querySelectorAll('#horaire td'))
+    .splice(9)
+    .map(e => e.textContent.trim());
+
+  let prayers = chunk(tds, 7);
+
+  prayers = prayers.map(p => {
+    let prayer = {};
+    names.forEach((e, j) => {
+      prayer[e.name] = p[j + 1];
+    });
+    prayer['month'] = month;
+    prayer['day'] = parseInt(p[0]);
+    return prayer;
+  });
+
+  return prayers;
+};
+
 const byName = (a, b) => (a.name > b.name ? 1 : b.name > a.name ? -1 : 0);
 
 const retriveAllData = async () => {
@@ -65,8 +93,16 @@ const retriveAllData = async () => {
   return result;
 };
 
+const set = (name, elements) => client.set(name, JSON.stringify(elements));
+const get = async name => JSON.parse(await getAsync(name));
+const remove = name => client.set(name, JSON.stringify([]));
+
 const setPrayers = prayers => client.set('prayers', JSON.stringify(prayers));
+const setCities = cities => client.set('cities', JSON.stringify(cities));
+const setAll = prayers => client.set('all', JSON.stringify(prayers));
+const resetAll = () => setAll([]);
 const getPrayers = async () => JSON.parse(await getAsync('prayers'));
+const getAll = async () => JSON.parse(await getAsync('all'));
 
 const resetdb = () => {
   setPrayers([]);
@@ -82,3 +118,44 @@ module.exports = {
   resetdb,
   getPrayers
 };
+
+// (async () => {
+//   const start = Date.now();
+//   let results = [];
+//   for (let cityIndex = 1; cityIndex <= 116; cityIndex++) {
+//     city = cities.filter(c => c.id === cityIndex)[0];
+//     if (!city) continue;
+
+//     console.log(`Getting data for ${city.names.fr}`);
+//     for (let monthIndex = 1; monthIndex <= 12; monthIndex++) {
+//       try {
+//         let data = await getAllDate(cityIndex, monthIndex);
+//         let monthPrayer = parsePrayersFromResponse(data, monthIndex);
+//         monthPrayer.forEach(m => {
+//           m.cityId = city.id;
+//           m.city = city.names.fr;
+//         });
+//         results.push(...monthPrayer);
+//       } catch (ex) {
+//         console.log(`something bad happened for city ${city.names.fr}`);
+//         monthIndex = monthIndex - 1;
+//       }
+//     }
+//     console.log(`done for city ${city.names.fr}`);
+//   }
+
+//   fs.writeFileSync('prayers.json', JSON.stringify(results));
+
+//   // resetAll();
+
+//   // const CITIES = 'cities';
+//   remove('all');
+//   set('all', results);
+//   // const data = await get(CITIES);
+//   // console.log(data);
+
+//   // fs.writeFileSync('prayers.json', JSON.stringify(data));
+
+//   const time = (Date.now() - start) / 1000;
+//   console.log(`done in ${time} seconds`);
+// })();

@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const cities = require('../data/cities.json');
+const cities = require('../data/cities');
 
 // Gets all the cities
 
