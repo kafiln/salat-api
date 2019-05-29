@@ -1,22 +1,19 @@
 const express = require('express');
 const cors = require('cors');
+const mongoose = require('mongoose');
 const routes = require('./routes');
 const app = express();
-const { initDb } = require('./update');
-const { client } = require('./redis');
+const dotenv = require('dotenv');
+dotenv.config();
 
-client.on('connect', async () => {
-  console.log('connected to redis');
-  await initDb();
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true }).then(() => {
+  console.log('Connected to MongoDB');
 });
 
 app.use(cors());
 //TODO: Add swagger doc
 // Routes
 app.use('', routes);
-
-// register cron
-require('./cron');
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Listening on port ${port}`));

@@ -5,7 +5,6 @@ const prayers = require('./data/prayers');
 const cities = require('./data/cities');
 const { sleep } = require('./sleep');
 const dotenv = require('dotenv');
-const { client, getAsync } = require('./redis');
 dotenv.config();
 
 const getData = async cityId =>
@@ -20,6 +19,7 @@ const parseDateFromDom = dom => {
   var pattern = /(\d{2})\/(\d{2})\/(\d{4})/;
   return new Date(dateString.replace(pattern, '$3/$2/$1'));
 };
+
 const parsePrayerTimesFromResponse = response => {
   const dom = new JSDOM(`${response.data}`);
   const tds = dom.window.document.getElementsByTagName('td');
