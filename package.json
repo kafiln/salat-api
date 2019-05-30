@@ -24,9 +24,7 @@
     "dotenv": "^8.0.0",
     "express": "^4.17.0",
     "jsdom": "^15.1.0",
-    "mongoose": "^5.5.11",
-    "node-cron": "^2.0.3",
-    "redis": "^2.8.0"
+    "mongoose": "^5.5.11"
   },
   "devDependencies": {
     "nodemon": "^1.19.0"

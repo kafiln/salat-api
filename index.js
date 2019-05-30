@@ -6,9 +6,12 @@ const app = express();
 const dotenv = require('dotenv');
 dotenv.config();
 
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true }).then(() => {
-  console.log('Connected to MongoDB');
-});
+mongoose
+  .connect(process.env.MONGO_URI, { useNewUrlParser: true })
+  .then(() => {
+    console.log('Connected to MongoDB');
+  })
+  .catch(_ => console.log('Could not connect to MongoDB', _));
 
 app.use(cors());
 //TODO: Add swagger doc

@@ -1,30 +1,26 @@
 const router = require('express').Router();
-const cities = require('../data/cities.json');
 const Prayer = require('../models/Prayer');
-// const { getPrayers } = require('../utils');
 
-router.use('/:id', async (req, res, next) => {
-  const id = parseInt(req.params.id);
-  if (!id) {
-    return res.status(404).json({ error: 'Id should be a number' });
-  }
+router.use('/:cityId?/:month?/:day?', async (req, res) => {
+  const filterQuery = {};
+
+  Object.keys(req.query).forEach(key => {
+    if (req.query[key]) {
+      filterQuery[key] = req.query[key];
+    }
+  });
 
   let prayers;
   try {
-    prayers = await Prayer.find({ id: id });
+    prayers = await Prayer.find(filterQuery).select('-_id');
   } catch (ex) {
-    console.log(ex);
-    return res.status(404).json({ error: 'Not found' });
+    return res.status(500).json({ error: ex });
   }
+  if (!prayers.length)
+    return res.status(400).json({
+      error: 'Nothing found, one of your parameters is invalid'
+    });
 
-  return res.status(200).json(prayers);
-});
-
-router.use('/', async (req, res) => {
-  const prayers = await Prayer.find({});
-  if (!prayers) {
-    return res.status(404).json({ error: 'Not found' });
-  }
   return res.status(200).json(prayers);
 });
 

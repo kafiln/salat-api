@@ -135,7 +135,7 @@
     {
         "refId": 78,
         "names": {
-            "fr": "BerrchrefId",
+            "fr": "Berrchid",
             "ar": "برشيد"
         }
     },
@@ -247,14 +247,14 @@
     {
         "refId": 88,
         "names": {
-            "fr": "El JadrefIda",
+            "fr": "El Jadida",
             "ar": "الجديدة"
         }
     },
     {
         "refId": 23,
         "names": {
-            "fr": "ErrachrefIdia",
+            "fr": "Errachidia",
             "ar": "الراشدية"
         }
     },
@@ -282,7 +282,7 @@
     {
         "refId": 112,
         "names": {
-            "fr": "FnrefIdeq",
+            "fr": "Fnideq",
             "ar": "الفنيدق"
         }
     },
@@ -450,7 +450,7 @@
     {
         "refId": 29,
         "names": {
-            "fr": "MrefIdelet",
+            "fr": "Midelet",
             "ar": "ميدلت"
         }
     },
@@ -527,15 +527,8 @@
     {
         "refId": 69,
         "names": {
-            "fr": "Sale",
-            "ar": "سلا"
-        }
-    },
-    {
-        "refId": 69,
-        "names": {
-            "fr": "Rabat",
-            "ar": "الرباط"
+            "fr": "Rabat Sale",
+            "ar": "الرباط سلا"
         }
     },
     {
@@ -590,28 +583,28 @@
     {
         "refId": 99,
         "names": {
-            "fr": "SrefIdi Ifni",
+            "fr": "Sidi Ifni",
             "ar": "سيدي إفني"
         }
     },
     {
         "refId": 46,
         "names": {
-            "fr": "SrefIdi Kacem",
+            "fr": "Sidi Kacem",
             "ar": "سيدي قاسم"
         }
     },
     {
         "refId": 52,
         "names": {
-            "fr": "SrefIdi Slimane",
+            "fr": "Sidi Slimane",
             "ar": "سيدي سليمان"
         }
     },
     {
         "refId": 60,
         "names": {
-            "fr": "SrefIdi Yahya Lgharb",
+            "fr": "Sidi Yahya Lgharb",
             "ar": "سيدي يحيى الغرب"
         }
     },
