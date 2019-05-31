@@ -15,7 +15,6 @@ mongoose
   .catch(_ => console.log('Could not connect to MongoDB', _));
 
 app.use(cors());
-//TODO: Add swagger doc
 // Routes
 app.use('', langMiddlewear, routes);
 
