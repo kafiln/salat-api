@@ -5,6 +5,7 @@ const routes = require('./routes');
 const app = express();
 const dotenv = require('dotenv');
 dotenv.config();
+const { langMiddlewear } = require('./middlewear');
 
 mongoose
   .connect(process.env.MONGO_URI, { useNewUrlParser: true })
@@ -16,7 +17,7 @@ mongoose
 app.use(cors());
 //TODO: Add swagger doc
 // Routes
-app.use('', routes);
+app.use('', langMiddlewear, routes);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Listening on port ${port}`));
