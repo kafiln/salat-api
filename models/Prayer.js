@@ -1,16 +1,19 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-const prayerSchema = new mongoose.Schema({
+const prayerSchema = new Schema({
   fajr: String,
-  chourouq: String,
+  chorouq: String,
   dhuhr: String,
   asr: String,
   maghrib: String,
   ishae: String,
   day: Number,
   month: Number,
-  cityId: Number,
-  city: String
+  cityId: {
+    type: Number,
+    ref: 'City'
+  }
 });
 
 module.exports = mongoose.model('Prayer', prayerSchema);

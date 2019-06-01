@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-const citySchema = new mongoose.Schema({
-  refId: Number,
+const citySchema = new Schema({
+  _id: Number,
   names: {
     fr: String,
     ar: String
