@@ -6,6 +6,8 @@ const toDto = lang => city => ({
   id: city._id
 });
 
+const byName = (a, b) => (a.name > b.name ? 1 : b.name > a.name ? -1 : 0);
+
 // Search by Id
 router.get('/:id', async (req, res) => {
   const { lang } = req;
@@ -41,7 +43,7 @@ router.get('/', async (req, res) => {
       } and language ${lang}`
     });
   }
-  res.status(200).send(cities.map(toDto(lang)));
+  res.status(200).send(cities.map(toDto(lang)).sort(byName));
 });
 
 module.exports = router;
