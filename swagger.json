@@ -14,7 +14,7 @@
             "url": "https://opensource.org/licenses/MIT"
         }
     },
-    "host": "",
+    "host": "maroc-salat.herokuapp.com",
     "basePath": "/",
     "tags": [
         {
@@ -27,7 +27,7 @@
         }
     ],
     "schemes": [
-        "http"
+        "https"
     ],
     "produces": [
         "application/json"
