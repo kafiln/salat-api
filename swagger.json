@@ -3,6 +3,11 @@
     "info": {
         "version": "1.0.0",
         "title": "Moroccan Prayer Time API",
+        "contact": {
+            "name": "Kafil NASDAMI",
+            "email": "kafil.nasdami@gmail.com",
+            "url": "https://github.com/Kafiil"
+        },
         "description": "Get the official prayer time in Morocco for all the city",
         "license": {
             "name": "MIT",
@@ -13,20 +18,16 @@
     "basePath": "/",
     "tags": [
         {
-            "name": "City",
-            "description": "API supported cities"
+            "name": "Prayer",
+            "description": " api to get the prayers times for cities in Morocco based on the official data form the Moroccan Ministry"
         },
         {
-            "name": "Prayer",
-            "description": "The official prayer time in Morocco for all the city"
+            "name": "City",
+            "description": "API supported cities"
         }
     ],
     "schemes": [
-        "http",
-        "https"
-    ],
-    "consumes": [
-        "application/json"
+        "http"
     ],
     "produces": [
         "application/json"
