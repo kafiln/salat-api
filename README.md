@@ -11,7 +11,7 @@ This is a small nodejs/express server that fetches data from a mongodb database.
 ## Data Source
 
 The source of the data is the official website of the [Moroccan Ministry](http://www.habous.gov.ma/), the code
-behind the scrapping process in available in [this github repo](https://github.com/Kafiil/habous-scraper), the result is saved to a json file and the imported to a monogo database.
+behind the scrapping process in available in [this github repo](https://github.com/Kafiil/habous-scraper), the result is saved to a json file and then imported to a monogo database.
 
 ## Links
 
