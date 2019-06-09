@@ -1,11 +1,11 @@
 const router = require('express').Router();
 const Prayer = require('../models/Prayer');
-const { parseDay } = require('../utils');
+const { parseDay, timesFromStringtoDate } = require('../utils');
 const { validateGetPrayers } = require('../validation/prayer');
 
 const toDto = lang => prayer => {
-  let dto = { ...prayer._doc };
-  delete dto.cityId;
+  let dto = timesFromStringtoDate(prayer);
+  // delete dto.cityId;
   //TODO: Handle format change
   dto.day = parseDay(prayer.day, prayer.month);
   dto.id = prayer.cityId._id;

@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "fajr"
+    },
+    {
+        "id": 2,
+        "name": "chorouq"
+    },
+    {
+        "id": 3,
+        "name": "dhuhr"
+    },
+    {
+        "id": 4,
+        "name": "asr"
+    },
+    {
+        "id": 5,
+        "name": "maghrib"
+    },
+    {
+        "id": 6,
+        "name": "ishae"
+    }
+]
