@@ -19,8 +19,8 @@ behind the scrapping process in available in [this github repo](https://github.c
   document and test the API.
 
 - I Also made a small-really-ugly-just-working react application to consume this API:
-  - [Demo](https://kafiil.github.io/react-prayers-time/)
-  - [Source code](https://github.com/Kafiil/react-prayers-time)
+  - [Demo](https://kafiil.github.io/salat/)
+  - [Source code](https://github.com/Kafiil/salat)
 
 ![react App](images/react.png)
 
