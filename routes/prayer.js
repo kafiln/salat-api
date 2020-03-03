@@ -8,8 +8,8 @@ const toDto = lang => prayer => {
   // delete dto.cityId;
   //TODO: Handle format change
   dto.day = parseDay(prayer.day, prayer.month);
-  dto.id = prayer.cityId._id;
-  dto.city = prayer.cityId.names[lang];
+  dto.id = prayer.cityId;
+  // dto.city = prayer.cityId.names[lang];
   return dto;
 };
 router.use('/', async (req, res) => {
@@ -29,7 +29,7 @@ router.use('/', async (req, res) => {
   try {
     prayers = await Prayer.find(filterQuery)
       .select('-_id')
-      .populate('cityId');
+      // .populate('cityId'); //TODO: See why populate is not working anymore
   } catch (ex) {
     return res.status(500).json({ error: ex });
   }
