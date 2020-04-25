@@ -1,35 +1,38 @@
 const moment = require('moment');
-const dotenv = require('dotenv');
-dotenv.config();
-const NAMES = require('./data/names').map(e => e.name);
+const NAMES = require('./data/names').map((e) => e.name);
 
-const parseDay = (day, month, year = null) => {
-  if (!year) {
-    year = new Date().getFullYear();
-  }
-  return new Date(Date.UTC(year, month - 1, day));
+const parseDay = (day, month) => {
+  let myDate = moment.utc();
+  myDate.millisecond(0);
+  myDate.minute(0);
+  myDate.hour(0);
+  myDate.second(0);
+
+  myDate.date(day);
+  myDate.month(month - 1);
+  return myDate.toISOString();
 };
 
 const parseDateTime = (timeString, day, month, year = null) => {
-  const [hour, minute] = timeString.split(':');
-  const result = parseDay(day, month, year);
-  result.setHours(hour);
-  result.setMinutes(minute);
-  return result;
+  if (!year) {
+    year = moment.utc().year();
+  }
+  return moment
+    .utc(`${day}-${month}-${year} ${timeString} +0100`, 'D-M-YYYY HH:mm Z')
+    .toISOString();
 };
 
-const timesFromStringtoDate = prayer => {
+const timesFromStringtoDate = (prayer) => {
   let result = {};
-  NAMES.forEach(name => {
-    result[name] = moment(parseDateTime(prayer[name], prayer.day, prayer.month))
-      .add(process.env.HOURS_OFFSET, 'hour')
-      .format('HH:mm');
+  NAMES.forEach((name) => {
+    const time = parseDateTime(prayer[name], prayer.day, prayer.month);
+    result[name] = time;
   });
   return result;
 };
 
 module.exports = {
   parseDateTime,
+  timesFromStringtoDate,
   parseDay,
-  timesFromStringtoDate
 };
