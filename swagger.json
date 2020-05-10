@@ -26,10 +26,6 @@
             "description": "API supported cities"
         }
     ],
-    "schemes": [
-        "http",
-        "https"
-    ],
     "produces": [
         "application/json"
     ],
@@ -52,11 +48,11 @@
                         "name": "lang",
                         "description": "The language of response",
                         "enum": [
-                            "fr",
-                            "ar"
+                            "fr-fr",
+                            "ar-ma-ma"
                         ],
                         "type": "string",
-                        "default": "fr"
+                        "default": "fr-fr"
                     }
                 ],
                 "responses": {
@@ -92,11 +88,11 @@
                         "in": "query",
                         "description": "The language of response",
                         "enum": [
-                            "fr",
-                            "ar"
+                            "fr-fr",
+                            "ar-ma"
                         ],
                         "type": "string",
-                        "default": "fr"
+                        "default": "fr-fr"
                     }
                 ],
                 "responses": {
@@ -148,11 +144,11 @@
                         "in": "query",
                         "description": "The language of response",
                         "enum": [
-                            "fr",
-                            "ar"
+                            "fr-fr",
+                            "ar-ma"
                         ],
                         "type": "string",
-                        "default": "fr"
+                        "default": "fr-fr"
                     }
                 ],
                 "responses": {
