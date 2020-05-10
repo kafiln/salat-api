@@ -18,7 +18,7 @@ const parseDateTime = (timeString, day, month, year = null) => {
     year = moment.utc().year();
   }
   return moment
-    .utc(`${day}-${month}-${year} ${timeString} +0100`, 'D-M-YYYY HH:mm Z')
+    .utc(`${day}-${month}-${year} ${timeString} +0000`, 'D-M-YYYY HH:mm Z')
     .toISOString();
 };
 
