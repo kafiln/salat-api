@@ -8,11 +8,14 @@ dotenv.config();
 const { langMiddlewear } = require('./middlewear');
 
 mongoose
-  .connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology:true })
+  .connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => {
     console.log('Connected to MongoDB');
   })
-  .catch(_ => console.log('Could not connect to MongoDB', _));
+  .catch((_) => console.log('Could not connect to MongoDB \n', _));
 
 app.use(cors());
 // Routes

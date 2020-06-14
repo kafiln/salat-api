@@ -2,15 +2,8 @@ const moment = require('moment');
 const NAMES = require('./data/names').map((e) => e.name);
 
 const parseDay = (day, month) => {
-  let myDate = moment.utc();
-  myDate.millisecond(0);
-  myDate.minute(0);
-  myDate.hour(0);
-  myDate.second(0);
-
-  myDate.date(day);
-  myDate.month(month - 1);
-  return myDate.toISOString();
+  let date = moment.utc(`${day}-${month}`, 'D-M');
+  return date.toISOString();
 };
 
 const parseDateTime = (timeString, day, month, year = null) => {
