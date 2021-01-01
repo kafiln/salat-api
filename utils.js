@@ -1,5 +1,5 @@
 const moment = require('moment');
-const NAMES = require('./data/names').map((e) => e.name);
+const NAMES = require('./data/names').map(e => e.name);
 
 const parseDay = (day, month) => {
   let date = moment.utc(`${day}-${month}`, 'D-M');
@@ -11,13 +11,16 @@ const parseDateTime = (timeString, day, month, year = null) => {
     year = moment.utc().year();
   }
   return moment
-    .utc(`${day}-${month}-${year} ${timeString} +0000`, 'D-M-YYYY HH:mm Z')
+    .utc(
+      `${day}-${month}-${year} ${timeString} ${process.env.TIMEZONE}`,
+      'D-M-YYYY HH:mm Z'
+    )
     .toISOString();
 };
 
-const timesFromStringtoDate = (prayer) => {
+const timesFromStringtoDate = prayer => {
   let result = {};
-  NAMES.forEach((name) => {
+  NAMES.forEach(name => {
     const time = parseDateTime(prayer[name], prayer.day, prayer.month);
     result[name] = time;
   });
@@ -27,5 +30,5 @@ const timesFromStringtoDate = (prayer) => {
 module.exports = {
   parseDateTime,
   timesFromStringtoDate,
-  parseDay,
+  parseDay
 };
