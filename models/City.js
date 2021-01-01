@@ -4,8 +4,8 @@ const Schema = mongoose.Schema;
 const citySchema = new Schema({
   _id: Number,
   names: {
-    'fr-fr': String,
-    'ar-ma': String
+    fr: String,
+    ma: String
   }
 });
 

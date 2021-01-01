@@ -38,9 +38,7 @@ router.get('/', async (req, res) => {
   const cities = await City.find(filterQuery);
   if (!cities.length) {
     return res.status(404).json({
-      error: `No city found with the name ${
-        req.query.name
-      } and language ${lang}`
+      error: `No city found with the name ${req.query.name} and language ${lang}`
     });
   }
   res.status(200).send(cities.map(toDto(lang)).sort(byName));

@@ -1,233 +1,208 @@
 {
-    "swagger": "2.0",
-    "info": {
-        "version": "1.0.0",
-        "title": "Moroccan Prayer Time API",
-        "contact": {
-            "name": "Kafil NASDAMI",
-            "email": "kafil.nasdami@gmail.com",
-            "url": "https://github.com/Kafiil"
-        },
-        "description": "Get the official prayer time in Morocco for all the city",
-        "license": {
-            "name": "MIT",
-            "url": "https://opensource.org/licenses/MIT"
-        }
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Moroccan Prayer Time API",
+    "contact": {
+      "name": "Kafil NASDAMI",
+      "email": "kafil.nasdami@gmail.com",
+      "url": "https://github.com/Kafiil"
     },
-    "host": "",
-    "basePath": "/",
-    "tags": [
-        {
-            "name": "Prayer",
-            "description": " api to get the prayers times for cities in Morocco based on the official data form the Moroccan Ministry"
-        },
-        {
-            "name": "City",
-            "description": "API supported cities"
-        }
-    ],
-    "produces": [
-        "application/json"
-    ],
-    "paths": {
-        "/city/{cityId}": {
-            "get": {
-                "tags": [
-                    "City"
-                ],
-                "summary": "Get a city by Id",
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "cityId",
-                        "required": true,
-                        "type": "number"
-                    },
-                    {
-                        "in": "query",
-                        "name": "lang",
-                        "description": "The language of response",
-                        "enum": [
-                            "fr-fr",
-                            "ar-ma-ma"
-                        ],
-                        "type": "string",
-                        "default": "fr-fr"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "schema": {
-                            "$ref": "#/definitions/City"
-                        }
-                    },
-                    "404": {
-                        "description": "City not found",
-                        "schema": {}
-                    }
-                }
-            }
-        },
-        "/city": {
-            "get": {
-                "tags": [
-                    "City"
-                ],
-                "summary": "Get all cities in system",
-                "parameters": [
-                    {
-                        "name": "name",
-                        "in": "query",
-                        "description": "The name of the city",
-                        "type": "string",
-                        "example": "casablanca"
-                    },
-                    {
-                        "name": "lang",
-                        "in": "query",
-                        "description": "The language of response",
-                        "enum": [
-                            "fr-fr",
-                            "ar-ma"
-                        ],
-                        "type": "string",
-                        "default": "fr-fr"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "schema": {
-                            "$ref": "#/definitions/Cities"
-                        }
-                    },
-                    "404": {
-                        "description": "City not found",
-                        "schema": {}
-                    }
-                }
-            }
-        },
-        "/prayer": {
-            "get": {
-                "tags": [
-                    "Prayer"
-                ],
-                "summary": "Get all cities in system",
-                "parameters": [
-                    {
-                        "name": "cityId",
-                        "in": "query",
-                        "description": "The id of the city",
-                        "type": "number"
-                    },
-                    {
-                        "name": "month",
-                        "multipleOf": 1,
-                        "minimum": 1,
-                        "maximum": 12,
-                        "in": "query",
-                        "description": "the month",
-                        "type": "number"
-                    },
-                    {
-                        "name": "day",
-                        "in": "query",
-                        "description": "the day",
-                        "type": "integer",
-                        "minimum": 1,
-                        "maximum": 31
-                    },
-                    {
-                        "name": "lang",
-                        "in": "query",
-                        "description": "The language of response",
-                        "enum": [
-                            "fr-fr",
-                            "ar-ma"
-                        ],
-                        "type": "string",
-                        "default": "fr-fr"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "schema": {
-                            "$ref": "#/definitions/Prayers"
-                        }
-                    }
-                }
-            }
-        }
-    },
-    "definitions": {
-        "City": {
-            "properties": {
-                "id": {
-                    "type": "number",
-                    "uniqueItems": true
-                },
-                "name": {
-                    "type": "string"
-                }
-            }
-        },
-        "Cities": {
-            "type": "array",
-            "items": {
-                "$ref": "#/definitions/City"
-            }
-        },
-        "Prayer": {
-            "properties": {
-                "fajr": {
-                    "type": "string",
-                    "example": "03:38"
-                },
-                "chorouq": {
-                    "type": "string",
-                    "example": "06:13"
-                },
-                "dhuhr": {
-                    "type": "string",
-                    "example": "12:28"
-                },
-                "asr": {
-                    "type": "string",
-                    "example": "16:13"
-                },
-                "maghrib": {
-                    "type": "string",
-                    "example": "19:43"
-                },
-                "ishae": {
-                    "type": "string",
-                    "example": "21:03"
-                },
-                "day": {
-                    "type": "string",
-                    "format": "date-time",
-                    "example": "2019-06-02T00:00:00Z"
-                },
-                "city": {
-                    "type": "string",
-                    "description": "The name of the city in the chosen language",
-                    "example": "Marrakech"
-                },
-                "id": {
-                    "type": "number",
-                    "description": "The id of the city",
-                    "example": 23
-                }
-            }
-        },
-        "Prayers": {
-            "type": "array",
-            "items": {
-                "$ref": "#/definitions/Prayer"
-            }
-        }
+    "description": "Get the official prayer time in Morocco for all the city",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
     }
+  },
+  "host": "",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Prayer",
+      "description": " api to get the prayers times for cities in Morocco based on the official data form the Moroccan Ministry"
+    },
+    {
+      "name": "City",
+      "description": "API supported cities"
+    }
+  ],
+  "produces": ["application/json"],
+  "paths": {
+    "/city/{city}": {
+      "get": {
+        "tags": ["City"],
+        "summary": "Get a city by Id",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "city",
+            "required": true,
+            "type": "number"
+          },
+          {
+            "in": "query",
+            "name": "lang",
+            "description": "The language of response",
+            "enum": ["fr", "ar"],
+            "type": "string",
+            "default": "fr"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/City"
+            }
+          },
+          "404": {
+            "description": "City not found",
+            "schema": {}
+          }
+        }
+      }
+    },
+    "/city": {
+      "get": {
+        "tags": ["City"],
+        "summary": "Get all cities in system",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "description": "The name of the city",
+            "type": "string",
+            "example": "casablanca"
+          },
+          {
+            "name": "lang",
+            "in": "query",
+            "description": "The language of response",
+            "enum": ["fr", "ar"],
+            "type": "string",
+            "default": "fr"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Cities"
+            }
+          },
+          "404": {
+            "description": "City not found",
+            "schema": {}
+          }
+        }
+      }
+    },
+    "/prayer": {
+      "get": {
+        "tags": ["Prayer"],
+        "summary": "Get all cities in system",
+        "parameters": [
+          {
+            "name": "city",
+            "in": "query",
+            "description": "The id of the city",
+            "type": "number"
+          },
+          {
+            "name": "month",
+            "multipleOf": 1,
+            "minimum": 1,
+            "maximum": 12,
+            "in": "query",
+            "description": "the month",
+            "type": "number"
+          },
+          {
+            "name": "day",
+            "in": "query",
+            "description": "the day",
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 31
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Prayers"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "City": {
+      "properties": {
+        "id": {
+          "type": "number",
+          "uniqueItems": true
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "Cities": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/City"
+      }
+    },
+    "Prayer": {
+      "properties": {
+        "fajr": {
+          "type": "string",
+          "example": "03:38"
+        },
+        "chorouq": {
+          "type": "string",
+          "example": "06:13"
+        },
+        "dhuhr": {
+          "type": "string",
+          "example": "12:28"
+        },
+        "asr": {
+          "type": "string",
+          "example": "16:13"
+        },
+        "maghrib": {
+          "type": "string",
+          "example": "19:43"
+        },
+        "ishae": {
+          "type": "string",
+          "example": "21:03"
+        },
+        "day": {
+          "type": "string",
+          "format": "date-time",
+          "example": "2019-06-02T00:00:00Z"
+        },
+        "city": {
+          "type": "string",
+          "description": "The name of the city in the chosen language",
+          "example": "Marrakech"
+        },
+        "id": {
+          "type": "number",
+          "description": "The id of the city",
+          "example": 23
+        }
+      }
+    },
+    "Prayers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Prayer"
+      }
+    }
+  }
 }

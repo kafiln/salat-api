@@ -1,4 +1,4 @@
-const langs = ['fr-fr', 'ar-ma'];
+const langs = ['fr', 'ar'];
 const formats = ['string', 'datetime'];
 
 //TODO: Merge those two

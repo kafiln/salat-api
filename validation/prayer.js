@@ -1,7 +1,7 @@
 const City = require('../models/City');
 
 const validateGetPrayers = async query => {
-  const numberKeys = ['cityId', 'month', 'day'];
+  const numberKeys = ['city', 'month', 'day'];
   errors = {};
 
   numberKeys.forEach(key => {
@@ -20,11 +20,11 @@ const validateGetPrayers = async query => {
     errors['day'] = 'day should be in [1,31] range';
   }
 
-  if (query.cityId) {
-    const city = await City.findOne({ _id: +query.cityId });
+  if (query.city) {
+    const city = await City.findOne({ _id: +query.city });
     if (!city) {
       isValid = false;
-      errors['cityId'] = 'The cityId does not exist';
+      errors['city'] = 'The city does not exist';
     }
   }
 
