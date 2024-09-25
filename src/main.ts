@@ -5,9 +5,7 @@ import { initSwagger } from './swagger';
 
 // ignore self-signed certificate in development only
 // FIX: add the appropriate certificate
-if (process.env.NODE_ENV !== 'production') {
-  process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
-}
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
