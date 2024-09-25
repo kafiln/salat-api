@@ -7,6 +7,11 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const port = process.env.PORT || 3000;
   app.useGlobalPipes(new ValidationPipe());
+  app.enableCors({
+    origin: '*', // Allow all origins
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: false, // Set to true if you need to allow cookies
+  });
   const config = new DocumentBuilder()
     .setTitle('API Docs')
     .setDescription('API description')
