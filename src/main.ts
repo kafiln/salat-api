@@ -3,10 +3,6 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app/app.module';
 import { initSwagger } from './swagger';
 
-// ignore self-signed certificate in development only
-// FIX: add the appropriate certificate
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
-
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const port = process.env.PORT || 3000;
