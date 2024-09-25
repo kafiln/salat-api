@@ -1,0 +1,1339 @@
+[
+  {
+    "id": 1,
+    "name": "الرباط",
+    "longitude": -6.51,
+    "latitude": 34.1,
+    "elevation": 120
+  },
+  {
+    "id": 2,
+    "name": "الخميسات",
+    "longitude": -6.5,
+    "latitude": 33.5,
+    "elevation": 460
+  },
+  {
+    "id": 3,
+    "name": "تيفلت",
+    "longitude": -6.2,
+    "latitude": 33.55,
+    "elevation": 460
+  },
+  {
+    "id": 4,
+    "name": "الرماني",
+    "longitude": -6.36,
+    "latitude": 33.31,
+    "elevation": 500
+  },
+  {
+    "id": 5,
+    "name": "والماس",
+    "longitude": -6,
+    "latitude": 33.25,
+    "elevation": 1260
+  },
+  {
+    "id": 6,
+    "name": "بوزنيقة",
+    "longitude": -7.1,
+    "latitude": 33.48,
+    "elevation": 100
+  },
+  {
+    "id": 7,
+    "name": "القنيطرة",
+    "longitude": -6.36,
+    "latitude": 34.15,
+    "elevation": 200
+  },
+  {
+    "id": 8,
+    "name": "سيدي قاسم",
+    "longitude": -5.43,
+    "latitude": 34.13,
+    "elevation": 450
+  },
+  {
+    "id": 9,
+    "name": "سيدي يحيى الغرب",
+    "longitude": -6.19,
+    "latitude": 34.19,
+    "elevation": 200
+  },
+  {
+    "id": 10,
+    "name": "سيدي سليمان",
+    "longitude": -5.57,
+    "latitude": 34.16,
+    "elevation": 100
+  },
+  {
+    "id": 11,
+    "name": "سوق أربعاء الغرب",
+    "longitude": -6.19,
+    "latitude": 34.19,
+    "elevation": 100
+  },
+  {
+    "id": 12,
+    "name": "عرباوة",
+    "longitude": -5.56,
+    "latitude": 34.55,
+    "elevation": 200
+  },
+  {
+    "id": 13,
+    "name": "مولاي بوسلهام",
+    "longitude": -6.17,
+    "latitude": 34.53,
+    "elevation": 100
+  },
+  {
+    "id": 14,
+    "name": "طنجة",
+    "longitude": -5.49,
+    "latitude": 35.46,
+    "elevation": 300
+  },
+  {
+    "id": 15,
+    "name": "تطوان",
+    "longitude": -5.22,
+    "latitude": 35.34,
+    "elevation": 520
+  },
+  {
+    "id": 16,
+    "name": "العرائش",
+    "longitude": -6.9,
+    "latitude": 35.11,
+    "elevation": 100
+  },
+  {
+    "id": 17,
+    "name": "أصيلة",
+    "longitude": -6.3,
+    "latitude": 35.28,
+    "elevation": 120
+  },
+  {
+    "id": 18,
+    "name": "شفشاون",
+    "longitude": -5.16,
+    "latitude": 35.1,
+    "elevation": 1150
+  },
+  {
+    "id": 19,
+    "name": "مرتيل",
+    "longitude": -5.17,
+    "latitude": 35.37,
+    "elevation": 100
+  },
+  {
+    "id": 20,
+    "name": "المضيق",
+    "longitude": -5.2,
+    "latitude": 35.41,
+    "elevation": 100
+  },
+  {
+    "id": 21,
+    "name": "القصر الكبير",
+    "longitude": -5.55,
+    "latitude": 35,
+    "elevation": 150
+  },
+  {
+    "id": 22,
+    "name": "القصر الصغير",
+    "longitude": -5.34,
+    "latitude": 35.5,
+    "elevation": 150
+  },
+  {
+    "id": 23,
+    "name": "الحسيمة",
+    "longitude": -3.56,
+    "latitude": 35.15,
+    "elevation": 200
+  },
+  {
+    "id": 24,
+    "name": "سبتة",
+    "longitude": -5.21,
+    "latitude": 35.53,
+    "elevation": 500
+  },
+  {
+    "id": 25,
+    "name": "الفنيدق",
+    "longitude": -5.22,
+    "latitude": 35.51,
+    "elevation": 250
+  },
+  {
+    "id": 26,
+    "name": "الجبهة",
+    "longitude": -4.4,
+    "latitude": 35.12,
+    "elevation": 250
+  },
+  {
+    "id": 27,
+    "name": "واد لاو",
+    "longitude": -5.6,
+    "latitude": 35.26,
+    "elevation": 100
+  },
+  {
+    "id": 28,
+    "name": "باب برد",
+    "longitude": -4.53,
+    "latitude": 35,
+    "elevation": 1230
+  },
+  {
+    "id": 29,
+    "name": "وزان",
+    "longitude": -5.35,
+    "latitude": 34.48,
+    "elevation": 700
+  },
+  {
+    "id": 30,
+    "name": "بوسكور",
+    "longitude": -3.36,
+    "latitude": 34.42,
+    "elevation": 400
+  },
+  {
+    "id": 31,
+    "name": "وجدة",
+    "longitude": -1.56,
+    "latitude": 34.41,
+    "elevation": 730
+  },
+  {
+    "id": 32,
+    "name": "بركان",
+    "longitude": -2.21,
+    "latitude": 34.55,
+    "elevation": 200
+  },
+  {
+    "id": 33,
+    "name": "فكيك",
+    "longitude": -1.14,
+    "latitude": 32.7,
+    "elevation": 900
+  },
+  {
+    "id": 34,
+    "name": "بوعرفة",
+    "longitude": -1.58,
+    "latitude": 32.32,
+    "elevation": 900
+  },
+  {
+    "id": 35,
+    "name": "كرسيف",
+    "longitude": -3.22,
+    "latitude": 34.13,
+    "elevation": 400
+  },
+  {
+    "id": 36,
+    "name": "جرادة",
+    "longitude": -2.1,
+    "latitude": 34.19,
+    "elevation": 1070
+  },
+  {
+    "id": 37,
+    "name": "عين الشعير",
+    "longitude": -2.31,
+    "latitude": 32.12,
+    "elevation": 900
+  },
+  {
+    "id": 38,
+    "name": "تاوريرت",
+    "longitude": -2.53,
+    "latitude": 34.25,
+    "elevation": 1000
+  },
+  {
+    "id": 39,
+    "name": "الناظور",
+    "longitude": -2.56,
+    "latitude": 35.11,
+    "elevation": 200
+  },
+  {
+    "id": 40,
+    "name": "مليلية",
+    "longitude": -2.58,
+    "latitude": 35.18,
+    "elevation": 100
+  },
+  {
+    "id": 41,
+    "name": "دبدو",
+    "longitude": -3.1,
+    "latitude": 34,
+    "elevation": 1100
+  },
+  {
+    "id": 42,
+    "name": "سلوان",
+    "longitude": -2.56,
+    "latitude": 35.4,
+    "elevation": 300
+  },
+  {
+    "id": 43,
+    "name": "بني أنصار",
+    "longitude": -2.55,
+    "latitude": 35.16,
+    "elevation": 200
+  },
+  {
+    "id": 44,
+    "name": "فرخانة",
+    "longitude": -2.59,
+    "latitude": 35.17,
+    "elevation": 200
+  },
+  {
+    "id": 45,
+    "name": "تالسينت",
+    "longitude": -3.26,
+    "latitude": 32.32,
+    "elevation": 1450
+  },
+  {
+    "id": 46,
+    "name": "تندرارة",
+    "longitude": -2,
+    "latitude": 33.3,
+    "elevation": 1470
+  },
+  {
+    "id": 47,
+    "name": "العيون الشرقية",
+    "longitude": -2.3,
+    "latitude": 34.35,
+    "elevation": 620
+  },
+  {
+    "id": 48,
+    "name": "بني ادرار",
+    "longitude": -1.59,
+    "latitude": 34.49,
+    "elevation": 520
+  },
+  {
+    "id": 49,
+    "name": "السعيدية",
+    "longitude": -2.15,
+    "latitude": 35.11,
+    "elevation": 100
+  },
+  {
+    "id": 50,
+    "name": "رأس الماء",
+    "longitude": -2.25,
+    "latitude": 35.9,
+    "elevation": 100
+  },
+  {
+    "id": 51,
+    "name": "تافوغالت",
+    "longitude": -2.24,
+    "latitude": 34.48,
+    "elevation": 890
+  },
+  {
+    "id": 52,
+    "name": "فزوان",
+    "longitude": -2.12,
+    "latitude": 34.55,
+    "elevation": 800
+  },
+  {
+    "id": 53,
+    "name": "أحفير",
+    "longitude": -2.6,
+    "latitude": 34.57,
+    "elevation": 300
+  },
+  {
+    "id": 54,
+    "name": "زايو",
+    "longitude": -2.43,
+    "latitude": 34.56,
+    "elevation": 600
+  },
+  {
+    "id": 55,
+    "name": "دريوش",
+    "longitude": -3.23,
+    "latitude": 34.58,
+    "elevation": 600
+  },
+  {
+    "id": 56,
+    "name": "بني تجيت",
+    "longitude": -3.28,
+    "latitude": 32.18,
+    "elevation": 1360
+  },
+  {
+    "id": 57,
+    "name": "بوعنان",
+    "longitude": -3.3,
+    "latitude": 32.3,
+    "elevation": 860
+  },
+  {
+    "id": 58,
+    "name": "الدار البيضاء",
+    "longitude": -7.4,
+    "latitude": 33.34,
+    "elevation": 200
+  },
+  {
+    "id": 59,
+    "name": "المحمدية",
+    "longitude": -7.24,
+    "latitude": 33.42,
+    "elevation": 100
+  },
+  {
+    "id": 60,
+    "name": "بن سليمان",
+    "longitude": -7.8,
+    "latitude": 33.37,
+    "elevation": 300
+  },
+  {
+    "id": 61,
+    "name": "سطات",
+    "longitude": -7.38,
+    "latitude": 33,
+    "elevation": 410
+  },
+  {
+    "id": 62,
+    "name": "الكارة",
+    "longitude": -7.14,
+    "latitude": 33.17,
+    "elevation": 420
+  },
+  {
+    "id": 63,
+    "name": "البروج",
+    "longitude": -7.12,
+    "latitude": 32.3,
+    "elevation": 500
+  },
+  {
+    "id": 64,
+    "name": "ابن أحمد",
+    "longitude": -7.15,
+    "latitude": 33.4,
+    "elevation": 650
+  },
+  {
+    "id": 65,
+    "name": "برشيد",
+    "longitude": -7.35,
+    "latitude": 33.16,
+    "elevation": 250
+  },
+  {
+    "id": 66,
+    "name": "الجديدة",
+    "longitude": -8.31,
+    "latitude": 33.15,
+    "elevation": 100
+  },
+  {
+    "id": 67,
+    "name": "أزمور",
+    "longitude": -8.21,
+    "latitude": 33.17,
+    "elevation": 150
+  },
+  {
+    "id": 68,
+    "name": "سيدي بنور",
+    "longitude": -8.26,
+    "latitude": 32.4,
+    "elevation": 190
+  },
+  {
+    "id": 69,
+    "name": "خميس الزمامرة",
+    "longitude": -8.43,
+    "latitude": 32.37,
+    "elevation": 200
+  },
+  {
+    "id": 70,
+    "name": "خنيفرة",
+    "longitude": -5.41,
+    "latitude": 32.56,
+    "elevation": 1000
+  },
+  {
+    "id": 71,
+    "name": "مولاي بوعزة",
+    "longitude": -6.12,
+    "latitude": 33.14,
+    "elevation": 900
+  },
+  {
+    "id": 72,
+    "name": "زاوية أحنصال",
+    "longitude": -6.7,
+    "latitude": 31.5,
+    "elevation": 2500
+  },
+  {
+    "id": 73,
+    "name": "بني ملال",
+    "longitude": -6.22,
+    "latitude": 32.2,
+    "elevation": 1200
+  },
+  {
+    "id": 74,
+    "name": "أزيلال",
+    "longitude": -6.35,
+    "latitude": 31.57,
+    "elevation": 1700
+  },
+  {
+    "id": 75,
+    "name": "الفقيه بنصالح",
+    "longitude": -6.42,
+    "latitude": 32.3,
+    "elevation": 500
+  },
+  {
+    "id": 76,
+    "name": "دمنات",
+    "longitude": -7.1,
+    "latitude": 31.44,
+    "elevation": 1700
+  },
+  {
+    "id": 77,
+    "name": "القصيبة",
+    "longitude": -6.3,
+    "latitude": 32.34,
+    "elevation": 1300
+  },
+  {
+    "id": 78,
+    "name": "قصبة تادلة",
+    "longitude": -6.17,
+    "latitude": 32.36,
+    "elevation": 540
+  },
+  {
+    "id": 79,
+    "name": "خريبكة",
+    "longitude": -6.55,
+    "latitude": 32.53,
+    "elevation": 830
+  },
+  {
+    "id": 80,
+    "name": "وادي زم",
+    "longitude": -6.35,
+    "latitude": 32.52,
+    "elevation": 880
+  },
+  {
+    "id": 81,
+    "name": "فاس",
+    "longitude": -5.1,
+    "latitude": 34.4,
+    "elevation": 450
+  },
+  {
+    "id": 82,
+    "name": "صفرو",
+    "longitude": -4.51,
+    "latitude": 33.5,
+    "elevation": 1000
+  },
+  {
+    "id": 83,
+    "name": "مولاي يعقوب",
+    "longitude": -5.11,
+    "latitude": 34.5,
+    "elevation": 400
+  },
+  {
+    "id": 84,
+    "name": "بولمان",
+    "longitude": -4.44,
+    "latitude": 33.22,
+    "elevation": 2500
+  },
+  {
+    "id": 85,
+    "name": "ميسور",
+    "longitude": -4.1,
+    "latitude": 33.3,
+    "elevation": 900
+  },
+  {
+    "id": 86,
+    "name": "رباط الخير",
+    "longitude": -4.25,
+    "latitude": 33.49,
+    "elevation": 1500
+  },
+  {
+    "id": 87,
+    "name": "المنزل بني يازغة",
+    "longitude": -4.33,
+    "latitude": 33.5,
+    "elevation": 1050
+  },
+  {
+    "id": 88,
+    "name": "إموزار كندر",
+    "longitude": -5.1,
+    "latitude": 33.44,
+    "elevation": 1520
+  },
+  {
+    "id": 89,
+    "name": "تازة",
+    "longitude": -4.1,
+    "latitude": 34.13,
+    "elevation": 900
+  },
+  {
+    "id": 90,
+    "name": "تاونات",
+    "longitude": -4.39,
+    "latitude": 34.32,
+    "elevation": 800
+  },
+  {
+    "id": 91,
+    "name": "أكنول",
+    "longitude": -3.53,
+    "latitude": 34.39,
+    "elevation": 1350
+  },
+  {
+    "id": 92,
+    "name": "تيزي وسلي",
+    "longitude": -3.48,
+    "latitude": 34.46,
+    "elevation": 1450
+  },
+  {
+    "id": 93,
+    "name": "بورد",
+    "longitude": -4.6,
+    "latitude": 34.44,
+    "elevation": 900
+  },
+  {
+    "id": 94,
+    "name": "تاهلة",
+    "longitude": -4.26,
+    "latitude": 34.3,
+    "elevation": 520
+  },
+  {
+    "id": 95,
+    "name": "تيسة",
+    "longitude": -4.41,
+    "latitude": 34.18,
+    "elevation": 310
+  },
+  {
+    "id": 96,
+    "name": "قرية با محمد",
+    "longitude": -5.13,
+    "latitude": 34.22,
+    "elevation": 250
+  },
+  {
+    "id": 97,
+    "name": "كتامة",
+    "longitude": -4.38,
+    "latitude": 34.53,
+    "elevation": 1750
+  },
+  {
+    "id": 98,
+    "name": "واد أمليل",
+    "longitude": -4.17,
+    "latitude": 34.11,
+    "elevation": 400
+  },
+  {
+    "id": 99,
+    "name": "مكناس",
+    "longitude": -5.35,
+    "latitude": 33.54,
+    "elevation": 600
+  },
+  {
+    "id": 100,
+    "name": "يفرن",
+    "longitude": -5.7,
+    "latitude": 33.32,
+    "elevation": 1500
+  },
+  {
+    "id": 101,
+    "name": "الحاجب",
+    "longitude": -5.23,
+    "latitude": 33.41,
+    "elevation": 1160
+  },
+  {
+    "id": 102,
+    "name": "زرهون",
+    "longitude": -5.32,
+    "latitude": 34.3,
+    "elevation": 860
+  },
+  {
+    "id": 103,
+    "name": "آزرو",
+    "longitude": -5.14,
+    "latitude": 33.26,
+    "elevation": 1430
+  },
+  {
+    "id": 104,
+    "name": "مراكش",
+    "longitude": -8.2,
+    "latitude": 31.38,
+    "elevation": 600
+  },
+  {
+    "id": 105,
+    "name": "قلعة السراغنة",
+    "longitude": -7.25,
+    "latitude": 32.3,
+    "elevation": 550
+  },
+  {
+    "id": 106,
+    "name": "الصويرة",
+    "longitude": -9.47,
+    "latitude": 31.31,
+    "elevation": 120
+  },
+  {
+    "id": 107,
+    "name": "شيشاوة",
+    "longitude": -8.46,
+    "latitude": 31.33,
+    "elevation": 500
+  },
+  {
+    "id": 108,
+    "name": "بنجرير",
+    "longitude": -7.58,
+    "latitude": 32.14,
+    "elevation": 550
+  },
+  {
+    "id": 109,
+    "name": "الرحامنة",
+    "longitude": -7.55,
+    "latitude": 32.29,
+    "elevation": 750
+  },
+  {
+    "id": 110,
+    "name": "تمنار",
+    "longitude": -9.41,
+    "latitude": 31,
+    "elevation": 450
+  },
+  {
+    "id": 111,
+    "name": "آسفي",
+    "longitude": -9.15,
+    "latitude": 32.18,
+    "elevation": 150
+  },
+  {
+    "id": 112,
+    "name": "الوليدية",
+    "longitude": -9.2,
+    "latitude": 32.43,
+    "elevation": 100
+  },
+  {
+    "id": 113,
+    "name": "اليوسفية",
+    "longitude": -8.32,
+    "latitude": 32.15,
+    "elevation": 460
+  },
+  {
+    "id": 114,
+    "name": "تسلطانت",
+    "longitude": -7.57,
+    "latitude": 31.33,
+    "elevation": 600
+  },
+  {
+    "id": 115,
+    "name": "تامصلوحت",
+    "longitude": -8.6,
+    "latitude": 31.3,
+    "elevation": 600
+  },
+  {
+    "id": 116,
+    "name": "قطارة",
+    "longitude": -8.1,
+    "latitude": 31.52,
+    "elevation": 600
+  },
+  {
+    "id": 117,
+    "name": "أكادير",
+    "longitude": -9.34,
+    "latitude": 30.23,
+    "elevation": 300
+  },
+  {
+    "id": 118,
+    "name": "تارودانت",
+    "longitude": -8.48,
+    "latitude": 30.29,
+    "elevation": 300
+  },
+  {
+    "id": 119,
+    "name": "تزنيت",
+    "longitude": -9.44,
+    "latitude": 29.42,
+    "elevation": 300
+  },
+  {
+    "id": 120,
+    "name": "إغرم",
+    "longitude": -8.28,
+    "latitude": 30.5,
+    "elevation": 2000
+  },
+  {
+    "id": 121,
+    "name": "تالوين",
+    "longitude": -7.56,
+    "latitude": 30.32,
+    "elevation": 1450
+  },
+  {
+    "id": 122,
+    "name": "تافراوت",
+    "longitude": -8.59,
+    "latitude": 29.43,
+    "elevation": 1550
+  },
+  {
+    "id": 123,
+    "name": "طاطا",
+    "longitude": -7.59,
+    "latitude": 29.45,
+    "elevation": 720
+  },
+  {
+    "id": 124,
+    "name": "أقا",
+    "longitude": -8.15,
+    "latitude": 29.24,
+    "elevation": 1500
+  },
+  {
+    "id": 125,
+    "name": "فم لحصن",
+    "longitude": -8.54,
+    "latitude": 29.2,
+    "elevation": 1040
+  },
+  {
+    "id": 126,
+    "name": "بويكرة",
+    "longitude": -9.22,
+    "latitude": 30.13,
+    "elevation": 150
+  },
+  {
+    "id": 127,
+    "name": "أولاد تايمة",
+    "longitude": -9.13,
+    "latitude": 30.24,
+    "elevation": 300
+  },
+  {
+    "id": 128,
+    "name": "الرشيدية",
+    "longitude": -4.27,
+    "latitude": 31.56,
+    "elevation": 1000
+  },
+  {
+    "id": 129,
+    "name": "الريصاني",
+    "longitude": -4.16,
+    "latitude": 31.16,
+    "elevation": 1000
+  },
+  {
+    "id": 130,
+    "name": "أرفود",
+    "longitude": -4.14,
+    "latitude": 31.25,
+    "elevation": 1000
+  },
+  {
+    "id": 131,
+    "name": "تنديت",
+    "longitude": -3.38,
+    "latitude": 33.4,
+    "elevation": 750
+  },
+  {
+    "id": 132,
+    "name": "كلميمة",
+    "longitude": -4.57,
+    "latitude": 31.42,
+    "elevation": 1000
+  },
+  {
+    "id": 133,
+    "name": "إملشيل",
+    "longitude": -5.37,
+    "latitude": 32.9,
+    "elevation": 2200
+  },
+  {
+    "id": 134,
+    "name": "تنجداد",
+    "longitude": -5.2,
+    "latitude": 31.3,
+    "elevation": 1000
+  },
+  {
+    "id": 135,
+    "name": "الريش",
+    "longitude": -4.28,
+    "latitude": 32.16,
+    "elevation": 1350
+  },
+  {
+    "id": 136,
+    "name": "ميدلت",
+    "longitude": -4.45,
+    "latitude": 32.41,
+    "elevation": 1610
+  },
+  {
+    "id": 137,
+    "name": "زاكورة",
+    "longitude": -5.51,
+    "latitude": 30.19,
+    "elevation": 800
+  },
+  {
+    "id": 138,
+    "name": "ورزازات",
+    "longitude": -6.56,
+    "latitude": 30.55,
+    "elevation": 1200
+  },
+  {
+    "id": 139,
+    "name": "تنغير",
+    "longitude": -5.32,
+    "latitude": 31.3,
+    "elevation": 1500
+  },
+  {
+    "id": 140,
+    "name": "هسكورة",
+    "longitude": -6.33,
+    "latitude": 31.4,
+    "elevation": 1250
+  },
+  {
+    "id": 141,
+    "name": "قلعة مكونة",
+    "longitude": -6.9,
+    "latitude": 31.14,
+    "elevation": 1500
+  },
+  {
+    "id": 142,
+    "name": "أكدز",
+    "longitude": -6.27,
+    "latitude": 30.42,
+    "elevation": 1550
+  },
+  {
+    "id": 143,
+    "name": "بومالن دادس",
+    "longitude": -6,
+    "latitude": 31.22,
+    "elevation": 1600
+  },
+  {
+    "id": 144,
+    "name": "النيف",
+    "longitude": -5.11,
+    "latitude": 31.7,
+    "elevation": 880
+  },
+  {
+    "id": 145,
+    "name": "أسول",
+    "longitude": -5.11,
+    "latitude": 31.56,
+    "elevation": 2800
+  },
+  {
+    "id": 146,
+    "name": "أمسمرير",
+    "longitude": -5.49,
+    "latitude": 31.42,
+    "elevation": 2100
+  },
+  {
+    "id": 147,
+    "name": "تازارين",
+    "longitude": -5.34,
+    "latitude": 30.46,
+    "elevation": 500
+  },
+  {
+    "id": 148,
+    "name": "سيدي إفني",
+    "longitude": -10.11,
+    "latitude": 29.23,
+    "elevation": 350
+  },
+  {
+    "id": 149,
+    "name": "كلميم",
+    "longitude": -10.4,
+    "latitude": 28.59,
+    "elevation": 650
+  },
+  {
+    "id": 150,
+    "name": "أسا",
+    "longitude": -9.27,
+    "latitude": 28.34,
+    "elevation": 300
+  },
+  {
+    "id": 151,
+    "name": "الزاك",
+    "longitude": -9.18,
+    "latitude": 28.1,
+    "elevation": 400
+  },
+  {
+    "id": 152,
+    "name": "طانطان",
+    "longitude": -11.7,
+    "latitude": 28.26,
+    "elevation": 300
+  },
+  {
+    "id": 153,
+    "name": "بويزكارن",
+    "longitude": -9.44,
+    "latitude": 29.11,
+    "elevation": 580
+  },
+  {
+    "id": 154,
+    "name": "المحبس",
+    "longitude": -9.3,
+    "latitude": 27.24,
+    "elevation": 450
+  },
+  {
+    "id": 155,
+    "name": "لمسيد",
+    "longitude": -10.48,
+    "latitude": 28.1,
+    "elevation": 500
+  },
+  {
+    "id": 156,
+    "name": "العيون",
+    "longitude": -13.14,
+    "latitude": 27.9,
+    "elevation": 100
+  },
+  {
+    "id": 157,
+    "name": "السمارة",
+    "longitude": -11.41,
+    "latitude": 26.46,
+    "elevation": 300
+  },
+  {
+    "id": 158,
+    "name": "بوجدور",
+    "longitude": -14.32,
+    "latitude": 26.8,
+    "elevation": 100
+  },
+  {
+    "id": 159,
+    "name": "طرفاية",
+    "longitude": -12.56,
+    "latitude": 27.56,
+    "elevation": 100
+  },
+  {
+    "id": 160,
+    "name": "تفاريتي",
+    "longitude": -10.34,
+    "latitude": 26.1,
+    "elevation": 1000
+  },
+  {
+    "id": 161,
+    "name": "بوكراع",
+    "longitude": -12.5,
+    "latitude": 26.22,
+    "elevation": 300
+  },
+  {
+    "id": 162,
+    "name": "كلتة زمور",
+    "longitude": -12.22,
+    "latitude": 25.8,
+    "elevation": 300
+  },
+  {
+    "id": 163,
+    "name": "أمكالة",
+    "longitude": -11.24,
+    "latitude": 26.1,
+    "elevation": 300
+  },
+  {
+    "id": 164,
+    "name": "أخفنير",
+    "longitude": -12.3,
+    "latitude": 28.3,
+    "elevation": 300
+  },
+  {
+    "id": 165,
+    "name": "الداخلة",
+    "longitude": -15.59,
+    "latitude": 23.42,
+    "elevation": 150
+  },
+  {
+    "id": 166,
+    "name": "الكويرة",
+    "longitude": -17.6,
+    "latitude": 20.5,
+    "elevation": 100
+  },
+  {
+    "id": 167,
+    "name": "أوسرد",
+    "longitude": -14.18,
+    "latitude": 22.33,
+    "elevation": 300
+  },
+  {
+    "id": 168,
+    "name": "بئر كندوز",
+    "longitude": -16.28,
+    "latitude": 21.37,
+    "elevation": 300
+  },
+  {
+    "id": 169,
+    "name": "بئر أنزاران",
+    "longitude": -14.32,
+    "latitude": 23.54,
+    "elevation": 400
+  },
+  {
+    "id": 301,
+    "name": "خميس سيدي عبد الجليل",
+    "longitude": -4.35,
+    "latitude": 34.6,
+    "elevation": 590
+  },
+  {
+    "id": 302,
+    "name": "أولاد عياد",
+    "longitude": -4.36,
+    "latitude": 34.5,
+    "elevation": 300
+  },
+  {
+    "id": 303,
+    "name": "تاهلة",
+    "longitude": -4.25,
+    "latitude": 34.3,
+    "elevation": 520
+  },
+  {
+    "id": 304,
+    "name": "مطماطة",
+    "longitude": -4.33,
+    "latitude": 34.6,
+    "elevation": 150
+  },
+  {
+    "id": 305,
+    "name": "إيمنتانوت",
+    "longitude": -8.51,
+    "latitude": 31.11,
+    "elevation": 900
+  },
+  {
+    "id": 306,
+    "name": "سيدي غانم",
+    "longitude": -9.27,
+    "latitude": 31.18,
+    "elevation": 1000
+  },
+  {
+    "id": 307,
+    "name": "تفنتان",
+    "longitude": -7.31,
+    "latitude": 31.21,
+    "elevation": 400
+  },
+  {
+    "id": 308,
+    "name": "آيت القاق",
+    "longitude": -7.47,
+    "latitude": 31.14,
+    "elevation": 2600
+  },
+  {
+    "id": 309,
+    "name": "أكدال أملشيل",
+    "longitude": -5.29,
+    "latitude": 32.1,
+    "elevation": 2200
+  },
+  {
+    "id": 310,
+    "name": "اكودال املشيل ميدلت",
+    "longitude": -5.29,
+    "latitude": 32.1,
+    "elevation": 1200
+  },
+  {
+    "id": 311,
+    "name": "أكايوار",
+    "longitude": -7.49,
+    "latitude": 31.16,
+    "elevation": 1200
+  },
+  {
+    "id": 312,
+    "name": "عين العودة",
+    "longitude": -6.47,
+    "latitude": 33.48,
+    "elevation": 200
+  },
+  {
+    "id": 313,
+    "name": "أسكين",
+    "longitude": -7.46,
+    "latitude": 31.2,
+    "elevation": 1100
+  },
+  {
+    "id": 314,
+    "name": "آيت ورير",
+    "longitude": -7.39,
+    "latitude": 31.34,
+    "elevation": 700
+  },
+  {
+    "id": 315,
+    "name": "زاوية مولاي ابراهيم",
+    "longitude": -7.58,
+    "latitude": 31.17,
+    "elevation": 1200
+  },
+  {
+    "id": 316,
+    "name": "تولكولت",
+    "longitude": -9.4,
+    "latitude": 31.14,
+    "elevation": 1200
+  },
+  {
+    "id": 317,
+    "name": "إيكس",
+    "longitude": -7.51,
+    "latitude": 30.57,
+    "elevation": 2500
+  },
+  {
+    "id": 318,
+    "name": "كرس",
+    "longitude": -7.38,
+    "latitude": 31.32,
+    "elevation": 2000
+  },
+  {
+    "id": 319,
+    "name": "تيسنت",
+    "longitude": -7.18,
+    "latitude": 29.53,
+    "elevation": 1400
+  },
+  {
+    "id": 320,
+    "name": "فم زكيد",
+    "longitude": -6.52,
+    "latitude": 30.5,
+    "elevation": 1500
+  },
+  {
+    "id": 321,
+    "name": "قصر إيش",
+    "longitude": -1.1,
+    "latitude": 32.31,
+    "elevation": 1250
+  },
+  {
+    "id": 322,
+    "name": "إيمين ثلاث",
+    "longitude": -6.32,
+    "latitude": 31.38,
+    "elevation": 1000
+  }
+]
