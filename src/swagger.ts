@@ -15,9 +15,9 @@ export const initSwagger = (app: INestApplication<AppModule>) => {
     operationIdFactory: (
       controllerKey: string,
       methodKey: string,
-      version: string
+      version: string,
     ) => methodKey,
   });
 
-  SwaggerModule.setup('api', app, document, { explorer: false });
+  SwaggerModule.setup('/', app, document, { explorer: false });
 };
