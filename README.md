@@ -1,85 +1,58 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# [Salat API](https://maroc-salat.herokuapp.com/)
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+A simple public rest api to get the prayers times for cities in Morocco based on the official data form the [Moroccan Ministry](http://www.habous.gov.ma/)
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Desciption
 
-## Description
+This is a small nodejs/express server that fetches data from a mongodb database.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+![Swagger screenshot](images/swagger.png)
 
-## Project setup
+## Data Source
 
-```bash
-$ npm install
-```
+The source of the data is the official website of the [Moroccan Ministry](http://www.habous.gov.ma/), the code
+behind the scrapping process in available in [this github repo](https://github.com/Kafiil/habous-scraper), the result is saved to a json file and then imported to a monogo database.
 
-## Compile and run the project
+## Links
 
-```bash
-# development
-$ npm run start
+- The api is freely hosted on heroku [here](https://maroc-salat.herokuapp.com/) and there is a swagger ui to
+  document and test the API.
 
-# watch mode
-$ npm run start:dev
+- I Also made a small-really-ugly-just-working react application to consume this API:
+  - [Demo](https://kafiil.github.io/salat/)
+  - [Source code](https://github.com/Kafiil/salat)
 
-# production mode
-$ npm run start:prod
-```
+![react App](images/react.png)
 
-## Run tests
+## Coming soon (Stay tuned)
 
-```bash
-# unit tests
-$ npm run test
+- A mobile application
 
-# e2e tests
-$ npm run test:e2e
+- A google chrome extension
 
-# test coverage
-$ npm run test:cov
-```
+## Road map
 
-## Resources
+- [x] Add Validation for all inputs
+- [x] Add Swagger
+- [ ] Add the optiion to return times as Datetime instead of strings (Loading ...)
+- [ ] Add docker support ( Coming soon)
 
-Check out a few resources that may come in handy when working with NestJS:
+## Contribution
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+If you think this piece of code is anyhow useful, please feel free to contribute, star ⭐️⭐️ and share 🙏 🙏
 
-## Support
+### How to to help you asked ? 🙏
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+- Fork
+- Star and share the project so it reaches more people
+- Test and give your feedback
+- Correct the data
+- Provide translations
+- Help with the documentation
+- Help with UI/UX for the react app and the chrome extension
 
 ## License
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+This project is under the MIT license.
+
+Made With ❤️ in Ramadan
