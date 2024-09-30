@@ -5,10 +5,12 @@ import {
   NotFoundException,
   Param,
 } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { CityService } from './city.service';
 import { LocationDto } from './dto/location.dto';
 
 @Controller('city')
+@ApiTags('City')
 export class CityController {
   constructor(private readonly cityService: CityService) {}
 
